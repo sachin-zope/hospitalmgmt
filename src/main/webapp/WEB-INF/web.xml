@@ -1,0 +1,87 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+	<servlet>
+		<servlet-name>jersey-serlvet</servlet-name>
+		<servlet-class>
+                     com.sun.jersey.spi.container.servlet.ServletContainer
+		</servlet-class>
+		<init-param>
+		     <param-name>com.sun.jersey.config.property.packages</param-name>
+		     <param-value>hospitalmgmt.rest</param-value>
+		</init-param>
+		<init-param>
+      		<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+      		<param-value>true</param-value>
+    	</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>IndoorRegisterServlet</servlet-name>
+		<display-name>IndoorRegisterServlet</display-name>
+		<description></description>
+		<servlet-class>hospitalmgmt.servlets.IndoorRegisterServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UploadServlet</servlet-name>
+		<display-name>UploadServlet</display-name>
+		<description></description>
+		<servlet-class>hospitalmgmt.servlets.UploadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<display-name>LoginServlet</display-name>
+		<description></description>
+		<servlet-class>hospitalmgmt.servlets.LoginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>MTPRegisterServlet</servlet-name>
+		<display-name>MTPRegisterServlet</display-name>
+		<description></description>
+		<servlet-class>hospitalmgmt.servlets.MTPRegisterServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeliveryRegisterServlet</servlet-name>
+		<display-name>DeliveryRegisterServlet</display-name>
+		<description></description>
+		<servlet-class>hospitalmgmt.servlets.DeliveryRegisterServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>OTRegisterServlet</servlet-name>
+		<display-name>OTRegisterServlet</display-name>
+		<description></description>
+		<servlet-class>hospitalmgmt.servlets.OTRegisterServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>jersey-serlvet</servlet-name>
+		<url-pattern>/api/v1.0/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>IndoorRegisterServlet</servlet-name>
+		<url-pattern>/indoorregisterservlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UploadServlet</servlet-name>
+		<url-pattern>/UploadServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/loginservlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MTPRegisterServlet</servlet-name>
+		<url-pattern>/mtpregisterservlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeliveryRegisterServlet</servlet-name>
+		<url-pattern>/deliveryregisterservlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>OTRegisterServlet</servlet-name>
+		<url-pattern>/otregisterservlet</url-pattern>
+	</servlet-mapping>
+</web-app>
